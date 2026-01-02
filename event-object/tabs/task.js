@@ -2,7 +2,7 @@ const allTab = Array.from(document.querySelectorAll('.tab'));
 let choiceTab = document.querySelector('.tab_active');
 const allContents = Array.from(document.querySelectorAll('.tab__content'));
 let choiceContent = document.querySelector('.tab__content_active');
-
+ 
 allTab.forEach((element, index) => {
     element.onclick = () => {
 
