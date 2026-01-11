@@ -25,6 +25,13 @@ allTooltip.forEach(item => {
             nextItem.classList.add('tooltip_active');
             item.title = nextItem.textContent;
         }
+        let { x, bottom } = item.getBoundingClientRect();
+
+        nextItem.style.left = `${x}px`;
+        nextItem.style.top = `${bottom + 10}px`
     })
+
+
+
 })
 

@@ -5,7 +5,7 @@ btn.addEventListener('click', (event) => {
     event.preventDefault();
 
     const taskInput = document.getElementById('task__input');
-    if (taskInput.value.length > 0) {
+    if (taskInput.value.trim()) {
         const newTask =
             `<div class="task">
       <div class="task__title">
@@ -15,6 +15,8 @@ btn.addEventListener('click', (event) => {
     </div>`;
         allTasks.insertAdjacentHTML('beforeEnd', newTask);
         taskInput.value = '';
+    } else {
+        location.reload()
     }
 })
 
